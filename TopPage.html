@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js}"></script>
+    <script src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+    <link href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"></link>
+    <link href="/css/members.css" th:href="@{/css/members.css}" rel="stylesheet"></link>
+    <script src="/js/members.js" th:src="@{/js/members.js}"></script>
+
+
+    <script type="text/javascript" src="/js/jquery.confirm.js" th:src="@{/js/jquery.confirm.js}" charset="utf-8"></script>
+	<link rel="stylesheet" href="/css/jquery.confirm.css" th:href="@{/css/jquery.confirm.css}" type="text/css" />
+    <title>課題４</title>
+
+</head>
+<body>
+<form method="GET" action="/insert">
+<p>
+<input type="text" name="textName" size="40">
+</p>
+<p>
+<input type="radio" name="radiobtnName" value="はい"  >はい
+<input type="radio" name="radiobtnName" value="いいえ" >いいえ
+</p>
+
+<p>
+<input type="checkbox" name="checkName" value="1" checked="checked" >その１
+<input type="checkbox" name="checkName" value="2" >その２
+<input type="checkbox" name="checkName" value="3" >その３
+</p>
+
+<p>プルダウン<br>
+<select name="pullName" >
+<option value="1" >１</option>
+<option value="2" >２</option>
+<option value="3" >３</option>
+</select></p>
+
+<p>
+<label for="textArea" class="col-lg-2 control-label" >テキストエリア</label>
+</p>
+<div class="col-lg-10">
+<textarea class="form-control" rows="3" name="textareaName" ></textarea>
+
+</div>
+<input type="submit" value="テーブルへインサート">
+</form>
+</body>
+</html>
