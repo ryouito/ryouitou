@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js}"></script>
+    <script src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+    <link href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"></link>
+    <link href="/css/members.css" th:href="@{/css/members.css}" rel="stylesheet"></link>
+    <script src="/js/members.js" th:src="@{/js/members.js}"></script>
+
+
+    <script type="text/javascript" src="/js/jquery.confirm.js" th:src="@{/js/jquery.confirm.js}" charset="utf-8"></script>
+	<link rel="stylesheet" href="/css/jquery.confirm.css" th:href="@{/css/jquery.confirm.css}" type="text/css" />
+    <title>tablelist from DB</title>
+
+</head>
+<body>
+
+<p>
+<tr th:each="i:${ins}"><br>
+<td th:text="${i.get('textName')}"/><br>
+<td th:text="${i.get('radiobtnName')}"/><br>
+<td th:text="${i.get('checkName')}"/><br>
+<td th:text="${i.get('pullName')}"/><br>
+<td th:text="${i.get('textareaName')}"/><br>
+</tr>
+</p>
+<p>
+<a href="http://localhost:8090/kadai4">インサートされました。</a>
+</p>
+</body>
+</html>
